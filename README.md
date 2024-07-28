@@ -8,7 +8,4 @@ I do provide a modified Version of Code Injector under `codeinjector.user.js` wi
 
 Most of them are just copy-pasted from other/old scripts and modified.
 
-Source is free to use/modify with credits (although i know you guys wont do it anyways).
-
-
 For Bugs or other questions join my [Discord Server](https://discord.gg/JFCXza3tnd).
