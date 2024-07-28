@@ -4,3 +4,6 @@ This is a Repo of all my public scripts for [Code Injector](https://greasyfork.o
 Most of them are just copy-pasted from other/old scripts and modified.
 
 Source is free to use/modify with credits (although i know you guys wont do it anyways).
+
+
+For Bugs or other questions join my [Discord Server](https://discord.gg/JFCXza3tnd).
