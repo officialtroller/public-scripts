@@ -4,7 +4,7 @@ This is a Repo of all my public scripts for [Code Injector](https://greasyfork.o
 
 I do provide a modified Version of Code Injector under `codeinjector.user.js` with some small standard modifications to the game client.
 
-<a>When using Spoof ECP Mod make sure to follow its alert that pops up when launching the Game as it does modify your ECP and i do not take any Responsibility if something happens.</a>
+<a id="important">When using Spoof ECP Mod make sure to follow its alert that pops up when launching the Game as it does modify your ECP and i do not take any Responsibility if something happens.</a>
 
 Most of them are just copy-pasted from other/old scripts and modified.
 
