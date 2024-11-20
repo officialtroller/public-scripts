@@ -38,9 +38,8 @@ async function injector(sbCode) {
 
     let settingsregex = src.match(/music:\{[^{}]*\},/);
     let settingsmatch = settingsregex[0].match(/[iI10OlL]{4,6}/g);
-    let newrgs = src.match(/function\(i\)\{if\(i\.addEventListener\("input",function\(s\)\{.*?\}\),i\.dispatchEvent\(new Event\("input"\)\),"sounds"===i\.id\)return i\.addEventListener\("change",function\(t\)\{.*?\}\)\}/s);
-    let newnewrgs = newrgs[0].match(/[iI10OlL]{4,6}/g);
-    let query = src.match(/for\(f=document\.queryselectorall\("\.option\s*input\[type=range\]"\),i=function\(e\)\{.*?,1\)\}\)\}\}/gi);
+    let newrgs = src.match(/e\.[iI10OlL]{4,6}\.[iI10OlL]{4,6}\.beep\(4\+\.2\*math\.random\(\)/gi);
+    let query = src.match(/for\(f=document\.queryselectorall\("\.option\s*input\[type=range\]"\),\s*i=function\(e\)\{.*?,1\)\}\)\}\}/gis);
     let reegtest = src.match(/if\("select"!==\w+\.type\)e\+='<div\s*class="option">'\+t\(\w+\.name\)\+'<label\s*class="switch"><input\s*type="checkbox"\s*'\+\(\w+\.value\?'checked="checked"':""\)\+'\s*id="'\+s\+'""><div\s*class="slider"><\/div><\/label><\/div>';/);
     if (reegtest) {
         let reeegtest = reegtest[0].match(/\w+\.type/)[0].match(/\w+\./)[0];
@@ -50,7 +49,7 @@ async function injector(sbCode) {
     src = src.replace(settingsregex, `$&emopacity:{name:"Emote Capacity",value:4,skipauto:!0,type:"range",min:1,max:5,${settingsmatch}:1,filter:"default,app,mobile"},`);
     checkSrcChange();
     if (query !== null) {
-        src = src.replace(/for\(f=document\.queryselectorall\("\.option\s*input\[type=range\]"\),i=function\(e\)\{.*?,1\)\}\)\}\}/gi, `for (f = document.querySelectorAll(".option input[type=range], .option input[type=color]"), i = function(e) {
+        src = src.replace(query, `for (f = document.querySelectorAll(".option input[type=range], .option input[type=color]"), i = function(e) {
         return function(i) {
             if (i.type === "range") {
                 if (i.id === "emopacity") {
