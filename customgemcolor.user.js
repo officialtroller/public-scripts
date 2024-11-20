@@ -50,7 +50,7 @@ async function injector(sbCode) {
     if (query !== null) {
         if (newrgs) {
             let newnewrgs = newrgs[0].match(/[iI10OlL]{4,6}/g);
-            src = src.replace(newrgs, `for (f = document.querySelectorAll(".option input[type=range], .option input[type=color]"), i = function(e) {
+            src = src.replace(query, `for (f = document.querySelectorAll(".option input[type=range], .option input[type=color]"), i = function(e) {
         return function(i) {
             if (i.type === "range") {
                 if (i.id === "emopacity") {
